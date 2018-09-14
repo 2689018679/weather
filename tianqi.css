@@ -1,0 +1,254 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #F4F4F4;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+header{
+    width: auto;
+    height: 0.88rem;
+    font-size: 0.36rem;
+    line-height: 0.88rem;
+    color: #fff;
+    background: #51AFE9;
+    text-align: center;
+    position: relative;
+}
+header .audioBtn{
+    width: .88rem;
+    height: .88rem;
+    position: absolute;
+    top:0;
+    right: 0.24rem;
+}
+.screen{
+    width: auto;
+    height: 8.2rem;
+    background-color: #51AFE9;
+    background-image: url("img/screen.png"),url("img/water.png"),url("img/wind.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    color:#fff;
+    text-align: center;
+    overflow: hidden;
+
+}
+.screen .aqi{
+    width: 0.76rem;
+    height: 0.88rem;
+    background-color: #F0CC35;
+    border-radius: 0.1rem;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.24rem;
+    font-size: 0.3rem;
+    color:#fff;
+    text-align: center;
+}
+.screen h3{
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+.screen h3::after{
+    content: "°";
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: 0.5rem;
+}
+.screen h4{
+    font-size: 0.5rem;
+}
+.screen h5{
+    font-size: 0.3rem;
+}
+.day{
+    width: auto;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+.day>div{
+    width: 50%;
+    height: 1.04rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.24rem;
+}
+.day>div span{
+    padding:0.1rem 0.5rem;
+}
+.day>div span img{
+    width: 0.7rem;
+}
+.hours{
+    width: auto;
+    height: 2.9rem;
+    background-color: #fff;
+    margin-top: 0.2rem;
+    overflow-x:auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-shrink: 1;
+}
+.hours::-webkit-scrollbar{
+    display: none;
+}
+.hours .con{
+    width: 400%;
+    height: 2.9rem;
+}
+.hours .con .box{
+    width: 1.14rem;
+    height: 1.6rem;
+    margin-top: 0.6rem;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.5rem;
+}
+
+.hours .con .box img{
+    width: 0.48rem;
+    height: 0.48rem;
+}
+.cityBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    overflow: auto;
+    background-color: #fff;
+    display: none;
+}
+.cityBox .search{
+    width: auto;
+    height: 1rem;
+    padding: 0.07rem 0.13rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.cityBox .search input{
+    width: 6.05rem;
+    height: 0.6rem;
+    box-sizing: border-box;
+    padding:0.1rem 0 0.1rem 0.64rem;
+    line-height: .48rem;
+    outline: none;
+    background-color: #F2F2F2;
+    border-radius: 0.88rem;
+    border: none;
+    color: #434343;
+}
+.cityBox .search a{
+    color: #434343;
+    width: 1.2rem;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: .28rem;
+}
+.hotcity{
+    padding: 0.24rem 0.26rem 0.14rem;
+}
+.hotcity p{
+    font-size: .36rem;
+    color: #434343;
+    height: 0.44rem;
+    line-height: 0.4rem;
+    margin: 0.2rem 0;
+}
+.hotcity ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hotcity ul li{
+    width: 32%;
+    height: 0.64rem;
+    line-height: 0.64rem;
+    margin-bottom: 0.24rem;
+    font-size: 0.28rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #434343;
+    box-sizing: border-box;
+    padding: 0 0.32rem;
+    border-radius: 0.88rem;
+    margin-left: 2%;
+}
+.hotcity ul li:nth-child(3n+1){
+    margin-left: 0;
+}
+.week{
+    width: auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
+    padding-top: 25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.week::-webkit-scrollbar{
+    display: none;
+}
+.week .chart{
+    position: absolute;
+    width: 20rem;
+    height: 2.2rem;
+    top: 2.6rem;
+    left: 0;
+}
+.week li{
+    width: 1.25rem;
+    font-size: 0.24rem;
+    color: #b2b2b2;
+    line-height: 0.24rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+.week li .day1,.week li .data{
+    height: 0.24rem;
+}
+.week li .data{
+    margin: 0.1rem 0 0.3rem;
+}
+.week li img{
+    display: block;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin:0 auto;
+}
+.week li .dayweatherimg{
+    margin-bottom: 2.72rem;
+}
+.week li .dayweather{
+    margin-bottom: 0.28rem;
+}
+.week li .nightweather{
+    margin:0.32rem 0 0.4rem;
+}
+.week li .wind{
+    margin-bottom: 0.12rem;
+}
